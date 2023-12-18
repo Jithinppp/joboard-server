@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
 const jobList = require("./DUMMY");
 
 const port = process.env.PORT;
