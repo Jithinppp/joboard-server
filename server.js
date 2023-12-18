@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+require("dotenv").config();
+
 const jobList = require("./DUMMY");
 
+const port = process.env.PORT;
 // Define a route to serve the JSON data
-app.get("/api/data", (req, res) => {
+app.get("/api/jobs", (req, res) => {
   res.json(jobList);
 });
 
