@@ -1,4 +1,4 @@
-const jobList = [
+const DATA = [
   {
     id: 1,
     title: "Software Engineer",
@@ -491,4 +491,4 @@ const jobList = [
   },
 ];
 
-exports.jobList = jobList;
+exports.DATA = DATA;
