@@ -111,6 +111,9 @@ app.get("/api/jobs/search", async (req, res) => {
         .limit(limit)
         .skip(startIdx);
       // add data to object
+      if (data.length <= 0) {
+        throw new Error("No jobs found");
+      }
       result.data = data;
       // check object positions to set pagination vals
       console.log(endIdx, data.length);
